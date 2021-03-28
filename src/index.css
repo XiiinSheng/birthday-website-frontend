@@ -11,3 +11,367 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/********************* General ***********************/
+
+
+
+/***************** Parent, a Router ******************/
+#router {
+  overflow-y: hidden;
+
+}
+
+#mainDiv {
+  position: relative;
+}
+
+/*
+#routeRoot {
+
+}
+
+#routeAbout {
+
+}
+*/
+
+/***************** Background Image ******************/
+/* Failed in making movable background */
+#background {
+  background-image: url('./images/bg.jpg');
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1000;
+  opacity: 8%;
+}
+
+/************************ Cover **************************/
+#cover{
+  height: 100vh;
+  overflow: hidden;
+}
+
+#decoDiv{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.deco {
+  position: absolute;
+  width: 100vw;
+  top: -25vw;
+  z-index: 100;
+  animation-name: fadeInDeco;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInDeco{
+  0%{
+      top: -35vw;
+  }
+  100%{
+      top: -25vw;
+  }
+}
+
+
+#decoLeft{
+  /* position: absolute; */
+  transform: rotate(-45deg);
+  left: -25vw;
+}
+
+#decoRight {
+  transform: rotate(45deg);
+  right: -25vw;
+}
+
+#coverMessage {
+  top: 0;
+  margin-top: 8vh;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  animation-name: fadeInMessage;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInMessage{
+  0%{
+      margin-top: 0;
+  }
+  50%{
+      margin-top: 8vh;
+  }
+  75%{
+      margin-top: 0;
+  }
+  100%{
+      margin-top: 8vh;
+  }
+}
+
+
+#cake {
+  width: 45vh;
+}
+
+#title{
+  font-size: max(5vw, 40px);
+  font-weight: bold;
+  margin: 0;
+  margin-top: 3vh;
+}
+
+#subtitle{
+  font-size: max(2vw, 20px);
+}
+
+#coverButton{
+  top: 75vh;
+  position: absolute;
+  height: 60px;
+  left: calc(50vw - 75px);
+}
+
+/******************** Intro & AddPost *******************/
+
+#intro{
+  overflow: hidden;
+  background:
+  linear-gradient(to bottom right, white 50%, transparent 50.5%) no-repeat bottom,
+  /* bottom part */
+  linear-gradient(0deg, white, white) no-repeat center,
+  /* middle portion */
+  linear-gradient(to top left, white 50%, transparent 50.5%) no-repeat top;
+  /* top portion */
+  background-size: 100% 10vw, 100% calc(100% - 20vw), 100% 10vw
+}
+
+#introPage{
+  height: auto;
+  padding-bottom: 25vh;
+  padding-top: 25vh;
+}
+
+#photoDiv{
+  text-align: center;
+  padding-bottom: 10vh;
+}
+
+#photo{
+  /* position: absolute; */
+  /* top: calc(100vh + (100vh - 40vw)/2 + 7vw); */
+  /* left: 60vw; */
+  border-radius: 50%;
+  height: max(20vw, 230px);
+}
+
+#introText{
+  position: relative;
+  /* top: calc((100vh - 40vw)/2 + 12vw); */
+  padding-left: min(15vw, 100px);
+  padding-right: min(15vw, 40px);
+}
+
+#introTitle{
+  font-size: max(3vw, 2em);
+  font-weight: bold;
+  padding-bottom: 2vw;
+}
+
+#introPara{
+  font-size: max(1.8vw, 1em);
+  padding-bottom: 4vw;
+}
+
+/********************* New Post Form **********************/
+
+#addPostForm{
+  height: auto;
+  padding-bottom: 12vh;
+  text-align: center;
+}
+
+#postForm{
+  padding-inline: 20vw;
+  padding-top: 5vh;
+
+}
+
+#postForm input{
+  margin: 2vw;
+}
+
+#postForm textarea{
+  margin: 2vw;
+  height: max(7vw, 100px);
+}
+
+#postFormRuler{
+  color: rgb(122, 122, 122);
+  width: 80%;
+  margin: auto;
+  height: 3px;
+}
+
+#postFormTitle{
+  font-size: max(4vw, 40px);
+  padding-top: 8vh;
+  padding-bottom: 10px;
+}
+
+/********************** Posts *********************/
+
+#posts{
+  overflow: hidden;
+  padding-top: 10vw;
+}
+
+.post{
+  border-radius: 25px; 
+  box-shadow: 0px 0px 25px #afafaf;
+  margin: max(6vw, 70px) max(5vw, 50px);
+}
+
+.postBody{
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: white;
+  padding: 3vw max(4vw, 30px) 0 max(4vw, 30px);
+
+}
+
+.content{
+  white-space: pre-line;
+  font-size: max(2vw, 22px);
+  padding: 30px 0;
+}
+
+.name{
+  color: grey;
+  font-size: max(1.6vw, 18px);
+
+}
+
+.date{
+  color: grey;
+  font-size: max(1vw, 17px);
+  padding-bottom: 3vw;
+  padding-left: 20px;
+}
+
+/******************** Comments *********************/
+
+.commentSection{
+  background-color: #F1F1F1;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+
+.commentBar{
+  padding: 5px 0;
+}
+
+.showCommentsButton{
+  position: relative;
+  left: 5%;
+}
+
+.newCommentButton{
+  position: relative;
+  left: 5%;
+}
+
+.commentList{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.commentsSection{
+  margin: 1vw 4vw 1vw max(4vw, 30px);
+}
+
+.oneComment{
+  overflow: hidden;
+}
+
+.commentName{
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.commentContent{
+  position: relative;
+  display: block;
+  float: left;
+  white-space: pre-line;
+}
+
+/*********************addComment form ****************/
+
+.addComment{
+  background-color: white;
+  padding: 3vw 4vw 3vw max(4vw, 30px);
+
+}
+
+.commentInput{
+  margin-bottom: 20px;
+}
+
+
+
+/*********************** About ***********************/
+
+#about{
+  padding-top: 20vh;
+  background:
+    linear-gradient(0deg, white, white) no-repeat bottom,
+    /* bottom portion */
+    linear-gradient(to top left, white 50%, transparent 50.5%) no-repeat top;
+    /* top portion */
+  background-size: 100% calc(100% - 10vw), 100% 10vw
+}
+
+#aboutTitle{
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+#aboutText{
+  padding-inline: 10vw;
+}
+
+#aboutButtons{
+  text-align: center;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+#backButton{
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-bottom: 20px;
+
+}
+
+#feedbackButton{
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-bottom: 20px;
+}
+
+/*********************** Footer ********************/
+#footer{
+  background-color: rgb(212, 212, 212);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
